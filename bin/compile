@@ -4,6 +4,8 @@ indent() {
   sed -u 's/^/       /'
 }
 
+BUILD_DIR=$1
+
 echo "-----> Found a Makefile"
 
 # if hello.txt is empty, abort the build
@@ -19,7 +21,7 @@ OPA_VENDOR="vendor/opa"
 mkdir -p $1/$OPA_VENDOR
 curl $OPA_BINARY -o - | tar -xz -C $1/$OPA_VENDOR -f -
 
-cd
+cd $BUILD_DIR
 
 # run make
 make
