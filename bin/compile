@@ -13,7 +13,7 @@ if [ ! -s $1/Makefile ]; then
 fi
 
 echo "-----> Install Opa"
-wget https://github.com/downloads/MLstate/opalang/opa-1.0.7.x86.run
+curl -sO https://github.com/downloads/MLstate/opalang/opa-1.0.7.x86.run || exit 1
 chmod +x opa-1.0.7.x86.run
 ./opa-1.0.7.x86.run
 
