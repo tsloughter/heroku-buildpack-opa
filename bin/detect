@@ -1,0 +1,8 @@
+#!/bin/sh
+
+if [ -f $1/opa.conf ]; then
+  echo "Opa Lang"
+  exit 0
+else
+  exit 1
+fi

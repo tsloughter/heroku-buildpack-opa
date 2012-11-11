@@ -1,0 +1,21 @@
+#!/bin/sh
+
+indent() {
+  sed -u 's/^/       /'
+}
+
+echo "-----> Found a Makefile"
+
+# if hello.txt is empty, abort the build
+if [ ! -s $1/Makefile ]; then
+  echo "Makefile was empty" | indent
+  exit 1
+fi
+
+echo "-----> Install Opa"
+wget https://github.com/downloads/MLstate/opalang/opa-1.0.7.x86.run
+chmod +x opa-1.0.7.x86.run
+./opa-1.0.7.x86.run
+
+# run make
+make
