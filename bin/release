@@ -3,5 +3,5 @@
 cat << EOF
 ---
 config_vars:
-  PATH: bin:/usr/bin:/bin
+  PATH: "vendor/opa/bin:/usr/bin:/bin"
 EOF
