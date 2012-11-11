@@ -15,7 +15,7 @@ fi
 echo "-----> Install Opa"
 curl -sO https://github.com/downloads/MLstate/opalang/opa-1.0.7.x86.run || exit 1
 chmod +x opa-1.0.7.x86.run
-./opa-1.0.7.x86.run
+sh opa-1.0.7.x86.run
 
 # run make
 make
