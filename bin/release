@@ -3,5 +3,5 @@
 cat << EOF
 ---
 config_vars:
-  PATH: "vendor/opa/bin:/usr/bin:/bin"
+  PATH: "/app/mlstate-opa/bin:/usr/bin:/bin"
 EOF
