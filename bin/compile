@@ -21,12 +21,17 @@ OPA_VENDOR="vendor/opa"
 mkdir -p $1/$OPA_VENDOR
 curl $OPA_BINARY -o - | tar -xz -C $1/$OPA_VENDOR -f -
 
-ln -s $1/$OPA_VENDOR /app/mlstate-opa
-
 PATH=/app/mlstate-opa/bin:$PATH
 export PATH
 
 cd $BUILD_DIR
 
 # run make
+#ln -s $1/$OPA_VENDOR /app/mlstate-opa
+mkdir -p /app/mlstate-opa
+mv $1/$OPA_VENDOR/* /app/mlstate-opa/
+
+ls -l /app/mlstate-opa/lib/opa/bin/opa-bin
+/app/mlstate-opa/lib/opa/bin/opa-bin
+
 make
