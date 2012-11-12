@@ -15,7 +15,7 @@ if [ ! -s $1/Makefile ]; then
 fi
 
 echo "-----> Install Opa"
-OPA_BINARY="https://s3.amazonaws.com/heroku-opalang2/opa-1.0.7.x86.tar.gz"
+OPA_BINARY="https://s3.amazonaws.com/heroku-opalang2/opalang.tgz"
 OPA_VENDOR="vendor/opa"
 
 mkdir -p $1/$OPA_VENDOR
