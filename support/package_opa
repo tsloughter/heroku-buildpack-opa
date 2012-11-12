@@ -1,0 +1,5 @@
+#!/bin/bash
+
+mkdir ./opalang
+wget https://github.com/downloads/MLstate/opalang/opa-1.0.7.x64.run -o ./opalang/opa-1.0.7.x64.run
+vulcan build -v -s ./opalang/ -c "mkdir /app/mlstate-opa && yes '' | ./opa-1.0.7.x64.run" -p /app/mlstate-opa
