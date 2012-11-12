@@ -3,5 +3,5 @@
 cat << EOF
 ---
 config_vars:
-  PATH: "/app/mlstate-opa/bin:/usr/bin:/bin"
+  PATH: "/app/mlstate-opa/bin:bin:node_modules/.bin:/usr/local/bin:/usr/bin:/bin"
 EOF
